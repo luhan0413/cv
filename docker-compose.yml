@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build: .
+    container_name: cv-portfolio
+    ports:
+      - "310:80"  # 將本地的 8080 端口映射到容器的 80 端口
+    volumes:
+      - .:/usr/share/nginx/html:ro  # 掛載本地目錄到容器（唯讀模式）
+    restart: unless-stopped
