@@ -1,0 +1,337 @@
+/* ===== CV 容器 ===== */
+.cv-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  flex: 1;
+}
+
+/* ===== 個人資訊區塊 ===== */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(100, 50, 150, 0.2);
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(148, 87, 235, 0.3);
+  box-shadow: 0 4px 20px rgba(100, 50, 150, 0.3);
+}
+
+.profile-info h1 {
+  margin: 0 0 0.5rem 0;
+  color: #470579;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.profile-info .subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.contact-item .icon {
+  font-size: 1.2rem;
+}
+
+.contact-item a {
+  color: #9457eb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #470579;
+  text-decoration: underline;
+}
+
+/* ===== CV 章節 ===== */
+.cv-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  color: #470579;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid rgba(148, 87, 235, 0.3);
+}
+
+/* ===== CV 卡片 ===== */
+.cv-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.8rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 20px rgba(100, 50, 150, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(100, 50, 150, 0.25);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-header h3 {
+  color: #470579;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.period {
+  color: #9457eb;
+  font-weight: 500;
+  font-size: 0.95rem;
+  background: rgba(148, 87, 235, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+}
+
+.card-content {
+  color: #444;
+  line-height: 1.7;
+}
+
+.card-content p {
+  margin: 0.5rem 0;
+}
+
+.description {
+  color: #666;
+  font-style: italic;
+  margin: 0.8rem 0 !important;
+}
+
+.achievement-list {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.achievement-list li {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.achievements {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.badge {
+  background: linear-gradient(135deg, #9457eb 0%, #470579 100%);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(148, 87, 235, 0.3);
+}
+
+/* ===== 技能區塊 ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(100, 50, 150, 0.15);
+}
+
+.skill-category h3 {
+  color: #470579;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, rgba(148, 87, 235, 0.15) 0%, rgba(71, 5, 121, 0.1) 100%);
+  color: #470579;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(148, 87, 235, 0.3);
+  transition: all 0.3s;
+}
+
+.skill-tag:hover {
+  background: linear-gradient(135deg, #9457eb 0%, #470579 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(148, 87, 235, 0.4);
+}
+
+/* ===== 研究興趣 ===== */
+.research-interests {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.interest-item h4 {
+  color: #470579;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.interest-item p {
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===== 下載按鈕 ===== */
+.download-section {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #9457eb 0%, #470579 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(148, 87, 235, 0.4);
+  transition: all 0.3s;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(148, 87, 235, 0.5);
+}
+
+.download-btn:active {
+  transform: translateY(-1px);
+}
+
+/* ===== 響應式設計 ===== */
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .profile-photo img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== 列印樣式 ===== */
+@media print {
+  body {
+    background: white;
+  }
+
+  .cv-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  header,
+  footer,
+  .download-section,
+  .cursor-glow {
+    display: none;
+  }
+
+  .cv-card,
+  .profile-section,
+  .skill-category {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .cv-card:hover {
+    transform: none;
+  }
+}
