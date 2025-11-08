@@ -151,6 +151,15 @@ body {
     font-weight: 500;
 }
 
+/* 移除 span 的底線（即使在連結內） */
+.timeline-photo a {
+    text-decoration: none;
+}
+
+.timeline-photo a span {
+    text-decoration: none;
+}
+
 .timeline-photo img:last-of-type + span {
     margin-bottom: 0;  /* 最後一個 span 不需要底部間隔 */
 }
@@ -323,20 +332,39 @@ body {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .card-images img {
     width: calc(50% - 8px);
-    min-width: 150px;
+    min-width: 200px;
+    max-width: 350px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
+    object-fit: contain;
+}
+
+.card-images a {
+    width: calc(50% - 8px);
+    min-width: 200px;
+    max-width: 350px;
+    display: inline-block;
+}
+
+.card-images a img {
+    width: 100%;
 }
 
 .card-images img:hover {
     transform: scale(1.05);
+}
+
+/* 移除工作經驗卡片圖片連結的底線 */
+.card-images a {
+    text-decoration: none;
 }
 
 /* 證照網格布局 */
